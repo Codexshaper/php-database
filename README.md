@@ -1,6 +1,6 @@
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![Build Status](https://travis-ci.org/Codexshaper/php-database.svg?branch=master)](https://travis-ci.org/Codexshaper/php-database)
-[![StyleCI](https://github.styleci.io/repos/266747790/shield?branch=master)](https://github.styleci.io/repos/266747790)
+[![StyleCI](https://github.styleci.io/repos/269548874/shield?branch=master)](https://github.styleci.io/repos/269548874)
 [![Quality Score](https://img.shields.io/scrutinizer/g/Codexshaper/php-database.svg?style=flat-square)](https://scrutinizer-ci.com/g/Codexshaper/php-database)
 [![Downloads](https://poser.pugx.org/Codexshaper/php-database/d/total.svg)](https://packagist.org/packages/Codexshaper/php-database)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Codexshaper/php-database.svg?style=flat-square)](https://packagist.org/packages/Codexshaper/php-database)
