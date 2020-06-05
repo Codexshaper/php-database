@@ -6,36 +6,37 @@ use Illuminate\Database\Capsule\Manager as CapsulManager;
 
 class Database extends CapsulManager
 {
-	/**
+    /**
      * Inherited.
      *
      * @var object
      */
-	protected static $instance = false;
+    protected static $instance = false;
 
-	public static function instance() {
-		if(!static::$instance) {
-			static::$instance = new self;
-		}
+    public static function instance()
+    {
+        if (!static::$instance) {
+            static::$instance = new self();
+        }
 
-		return static::$instance;
-	}
+        return static::$instance;
+    }
 
-	public function __construct($options = []) {
+    public function __construct($options = [])
+    {
+        parent::__construct();
 
-		parent::__construct();
+        if (!empty($options)) {
+            $this->addConnection($options);
+        }
+    }
 
-		if(!empty($options)) {
-			$this->addConnection($options);
-		}
-	}
+    public function run()
+    {
+        //Make this Database instance available globally.
+        $this->setAsGlobal();
 
-	public function run()
-	{
-		//Make this Database instance available globally.
-		$this->setAsGlobal();
-
-		// Setup the Eloquent ORM.
-		$this->bootEloquent();
-	}
+        // Setup the Eloquent ORM.
+        $this->bootEloquent();
+    }
 }
